@@ -1,7 +1,7 @@
 // DFS is not guaranteed to return the most optimal path in a graph
 
 export default (graph, startNode, goalNode) => {
-  const stack = [];
+  const queue = [];
 
   // we need to keep track of visited nodes so we don't revisit them
   // a Set is a collection of unique values or "keys"
@@ -20,11 +20,11 @@ export default (graph, startNode, goalNode) => {
   // we push the start Node onto our stack and add it into our visited nodes set to keep track that it was visited
   // we could potentially add a "visited" property to our Node as well, but this is just a design choice to leave the Node class alone and untouched
 
-  stack.push(startNode);
+  queue.push(startNode);
   visitedNodes.add(startNode);
 
-  while (stack.length) {
-    const currentNode = stack.pop();
+  while (queue.length) {
+    const currentNode = queue.shift();
 
     // if we reach our goal node, we stop execution and return our parentMap, which will represent the paths we took before we found our goal node
     if (currentNode === goalNode) {
@@ -52,7 +52,7 @@ export default (graph, startNode, goalNode) => {
       //update parent set
       parentMap.set(neighborNode, currentNode);
       // push into stack
-      stack.push(neighborNode);
+      queue.push(neighborNode);
     }
   }
   // if we get here, there is no path
