@@ -17,7 +17,7 @@ describe('DFS Search', () => {
     const node50 = new Node(50);
     const node100 = new Node(100);
 
-    // add nodes
+
     graph.addNode(node5);
     graph.addNode(node10);
     graph.addNode(node15);
@@ -29,7 +29,6 @@ describe('DFS Search', () => {
     graph.addNode(node45);
     graph.addNode(node50);
 
-    // add edges
     graph.addEdge(node5, node45);
     graph.addEdge(node5, node35);
     graph.addEdge(node5, node30);
