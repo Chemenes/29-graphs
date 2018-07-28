@@ -1,4 +1,4 @@
-// DFS is not guaranteed to return the most optimal path in a graph
+
 
 export default (graph, startNode, goalNode) => {
   const queue = [];
