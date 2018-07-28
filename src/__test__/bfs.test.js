@@ -3,7 +3,7 @@ import Node from '../lib/node';
 import BFS from '../lib/bfs';
 
 describe('BFS Search', () => {
-  test('testing DFS search', () => {
+  test('testing BFS search', () => {
     const graph = new Graph();
     const node5 = new Node(1);
     const node10 = new Node(10);
@@ -44,7 +44,7 @@ describe('BFS Search', () => {
     graph.addEdge(node20, node25);
     graph.addEdge(node15, node25);
 
-    const paths = BFS(graph, node5, node25);
+    const paths = BFS(graph, node1, node25);
     console.log(paths);
     expect(paths).not.toBeNull();
     expect(paths.has(node25)).toBeTruthy();
