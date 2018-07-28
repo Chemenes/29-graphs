@@ -1,6 +1,6 @@
 import Graph from '../lib/graph';
 import Node from '../lib/node';
-import DFS from '../lib/bfs';
+import BFS from '../lib/bfs';
 
 describe('BFS Search', () => {
   test('testing DFS search', () => {
